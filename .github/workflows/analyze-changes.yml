@@ -1,4 +1,4 @@
-name: PVS-Studio analyze changes
+name: analyze-changes
 on:
   push:
     paths:
