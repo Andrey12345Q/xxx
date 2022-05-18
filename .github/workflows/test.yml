@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 name: test
 
 on: push
@@ -10,16 +9,3 @@ jobs:
     steps:
       - uses: actions/checkout@v2.1.0
       - run: dotnet test
-=======
-name: test
-
-on: push
-
-jobs:
-  tests:
-    name: Unit Testing
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v2.1.0
-      - run: dotnet test
->>>>>>> 79ea7f02855486e985a590b0aa56dc7f79bc3186
