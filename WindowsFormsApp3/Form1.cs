@@ -60,8 +60,8 @@ namespace WindowsFormsApp3
 
         private void Form1_Load(object sender, EventArgs r)
         {
-            try
-            {
+            //try
+            //{
 
 
                 dataGridView1.Rows.Clear();
@@ -71,10 +71,10 @@ namespace WindowsFormsApp3
 
                 BinaryFormatter formatter = new BinaryFormatter();
 
-                if (!File.Exists(@"list.txt"))
-                {
-                    throw new FileNotFoundException();
-                }
+                //if (!File.Exists(@"list.txt"))
+                //{
+                    //throw new FileNotFoundException();
+                //}
 
                 gridText.Text = (object[,])formatter.Deserialize(fs);
 
@@ -96,16 +96,16 @@ namespace WindowsFormsApp3
 
 
             }
-            catch (FileNotFoundException a)
-            {
+          //  catch (FileNotFoundException a)
+           // {
 
-                MessageBox.Show("Страрый файл ненайден. Будет создан новый", "Ошибка");
-                File.WriteAllText("s.txt", a.Message +  a.StackTrace);
+              //  MessageBox.Show("Страрый файл ненайден. Будет создан новый", "Ошибка");
+              //  File.WriteAllText("s.txt", a.Message +  a.StackTrace);
                
             
 
 
-            }
+           // }
            
 
 
