@@ -27,7 +27,7 @@ namespace WindowsFormsApp3
         {
             InitializeComponent();
             var col = dataGridView1.Columns[2] as IColorFormat;
-            col.ColorFormats = new[] //-V3149
+            col.ColorFormats = new[]
             {
                  new ColorFormat()
                  {
