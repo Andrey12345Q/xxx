@@ -1,34 +1,11 @@
-# Имя флоу
-name: .NET Core
+name: test
 
-# Когда действие запустится (триггеры)e
-on:
-  push:
-    # при push в master
-    branches: [ main ]
+on: push
 
-  pull_request:
-    # при создании pull request на master
-    branches: [ main ]
-
-# Что будем делать (экшены)
 jobs:
-  # Имя действия, придумываем сами
-  integration-tests:
-    # На какой ОС будет работать виртуальная машина
-    # Можно выбрать Ubuntu, Windows Server или macOS
-    runs-on: ubuntu-latest
-    # Шаги действия
+  tests:
+    name: Unit Testing
+    runs-on: windows-latest
     steps:
-      # Шаг 1: собираем сервисы в режиме тестирования
-      - uses: actions/checkout@v2
-      - name: Build the stack
-        run: docker-compose -f docker-compose.prod.yml -f docker-compose.test.yml up -d --build
- 
-      # Шаг 2: собираем проект с тестами
-      - name: Build tests
-        run: dotnet build GOT.Tests
-
-      # Шаг 3: запускаем тесты с небольшой детализацией
-      - name: Run tests
-        run: dotnet test LOT.Tests --verbosity normal
+      - uses: actions/checkout@v2.1.0
+      - run: dotnet test
