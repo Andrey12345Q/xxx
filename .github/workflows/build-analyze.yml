@@ -14,6 +14,7 @@ jobs:
             https://files.pvs-studio.com/etc/viva64.list
           sudo apt update
           sudo apt install pvs-studio
+          sudo apt-get -y install pvs-studio-dotnet
           pvs-studio-analyzer credentials ${{ secrets.PVS_STUDIO_CREDENTIALS }}
       - name: Analyze
         run: |
