@@ -19,9 +19,6 @@ jobs:
       - name: Analyze
         run: |
           pvs-studio-dotnet  --target "WindowsFormsApp3.sln" --platform "Any CPU" --configuration "Release" --output "mylog.plog" --progress
-      - name: Convert report
-        run: |
-          plog-converter -t sarif -o pvs-report.sarif PVS-Studio.log
       - name: Publish report
         uses: github/codeql-action/upload-sarif@v1
         with:
