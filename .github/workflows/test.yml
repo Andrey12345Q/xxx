@@ -1,7 +1,5 @@
-name: test
-
-on: push
-
+name: PVS-Studio build analysis
+on: workflow_dispatch
 jobs:
   build-analyze:
     runs-on: ubuntu-latest
