@@ -1,5 +1,5 @@
 name: PVS-Studio build analysis
-on: workflow_dispatch
+on: push
 jobs:
   build-analyze:
     runs-on: ubuntu-latest
