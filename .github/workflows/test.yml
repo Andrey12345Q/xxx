@@ -1,4 +1,4 @@
-name: PVS-Studio build analysis
+name: test
 on: push
 jobs:
   build-analyze:
