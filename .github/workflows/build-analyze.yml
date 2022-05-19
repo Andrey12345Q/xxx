@@ -19,6 +19,7 @@ jobs:
       - name: Build
         run: |
           cmake -Wno-dev
+          cmake -DCMAKE_INSTALL_PREFIX=/usr/local -DB00ST_R00T=/snort_src/boost_1_76_0/../hyperscan-5.4.0 ..
           cmake --build build -j
       - name: Analyze
         run: |
