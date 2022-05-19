@@ -19,7 +19,6 @@ jobs:
       - name: Build
         run: |
           cmake -Wno-dev
-          cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=On -B build .
           cmake --build build -j
       - name: Analyze
         run: |
