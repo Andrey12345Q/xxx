@@ -3,7 +3,7 @@
 #
 # Version 12
 
-cmake_minimum_required(VERSION 15.8)
+cmake_minimum_required(VERSION 3.23.1)
 cmake_policy(SET CMP0054 NEW)
 
 if (PVS_STUDIO_AS_SCRIPT)
