@@ -11,7 +11,7 @@ jobs:
           wget -q -O - https://files.pvs-studio.com/etc/pubkey.txt \
             | sudo apt-key add -
           sudo wget -O /etc/apt/sources.list.d/viva64.list \
-            https://files.pvs-studio.com/etc/viva64.list \
+            https://files.pvs-studio.com/etc/viva64.list
           sudo apt update
           sudo apt install pvs-studio
           sudo apt-get -y install pvs-studio-dotnet
