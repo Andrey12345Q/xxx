@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/hasib/nvtop/build/CMakeFiles/3.12.0/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/hasib/nvtop/build/CMakeFiles/3.23.1/CompilerIdC/a.out"
 
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/hasib/nvtop/build/CMakeFiles/CMakeTmp
