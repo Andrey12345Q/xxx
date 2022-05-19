@@ -16,10 +16,6 @@ jobs:
           sudo apt install pvs-studio
           sudo apt-get -y install pvs-studio-dotnet
           pvs-studio-analyzer credentials ${{ secrets.PVS_STUDIO_CREDENTIALS }}
-      - name: Build
-        run: |
-          cmake -Wno-dev
-          cmake --build build -j
       - name: Analyze
         run: |
           pvs-studio-dotnet  --target "WindowsFormsApp3.sln" --platform "Any CPU" --configuration "Release" --output "mylog.plog" --progress
