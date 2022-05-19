@@ -1,5 +1,5 @@
 include(PVS-Studio.cmake)
-cmake_minimum_required(VERSION 3.12.0)
+cmake_minimum_required(VERSION 9.4.0)
 pvs_studio_add_target(TARGET ${PROJECT_NAME}.analyze ALL
                       OUTPUT
                       FORMAT errorfile
