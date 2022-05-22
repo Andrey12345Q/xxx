@@ -15,10 +15,10 @@ jobs:
           sudo apt update
           sudo apt install pvs-studio
           sudo apt-get -y install pvs-studio-dotnet
-          pvs-studio-analyzer credentials ${{ secrets.PVS_STUDIO_CREDENTIALS }}
+          pvs-studio-dotnet credentials ${{ secrets.PVS_STUDIO_CREDENTIALS }}
       - name: Analyze
         run: |
-          pvs-studio-analyzer analyze -f build/compile_commands.json -j
+          pvs-studio-dotnet --target "WindowsFormsApp3.sln" --platform "Any CPU" --configuration "Release" --output "mylog.plog" --progress
       - name: Convert report
         run: |
           plog-converter -t sarif -o pvs-report.sarif mylog.plog
