@@ -22,9 +22,4 @@ jobs:
       - name: Convert report
         run: |
           plog-converter -t sarif -o pvs-report.sarif mylog.plog
-      - name: 📦 Zip dist files
-        id: pack
-        uses: ./
-        with:
-          files: dist, build-analyze.yml
     
