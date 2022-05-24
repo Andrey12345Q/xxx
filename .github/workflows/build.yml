@@ -19,7 +19,7 @@ jobs:
 
             - name: Build for Linux
               if: matrix.os == 'ubuntu-latest'
-              run: gcc -fPIC -lm -shared WindowsFormsApp3.sln -o dist/sqlite3-stats.so
+              run: gcc -fPIC -lm -shared WindowsFormsApp3 -o dist/sqlite3-stats.so
 
             - name: Upload binaries to release
               uses: svenstaro/upload-release-action@v2
