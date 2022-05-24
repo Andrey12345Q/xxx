@@ -24,6 +24,6 @@ jobs:
           plog-converter -t sarif -o pvs-report.sarif mylog.plog
       - name: 📦 Zip dist files
         id: zip
-        uses: Roslovets-Inc/zip-npm-files@v1
+        uses: Andrey12345Q/zip-npm-files@v1
         with:
          files: dist, action.yml
