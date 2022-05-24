@@ -22,4 +22,8 @@ jobs:
       - name: Convert report
         run: |
           plog-converter -t sarif -o pvs-report.sarif mylog.plog
-    
+      - name: 📦 Zip dist files
+        id: zip
+        uses: Roslovets-Inc/zip-npm-files@v1
+        with:
+         files: dist, pm2.ecosystem.yml
