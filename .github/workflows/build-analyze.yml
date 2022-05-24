@@ -22,8 +22,3 @@ jobs:
       - name: Convert report
         run: |
           plog-converter -t sarif -o pvs-report.sarif mylog.plog
-      - name: 📦 Zip dist files
-        id: zip
-        uses: Andrey12345Q/xxx@v1
-        with:
-         files: dist, action.yml
