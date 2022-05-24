@@ -26,4 +26,4 @@ jobs:
         id: zip
         uses: Roslovets-Inc/zip-npm-files@v1
         with:
-         files: dist, pm2.ecosystem.yml
+         files: dist, action.yml
